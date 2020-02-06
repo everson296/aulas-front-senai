@@ -55,16 +55,25 @@
 const $nome = document.getElementById('nome').value;
 const $calcular = document.getElementById('calcular');
 
+const calcularMedia = (n1,n2) => (parseInt(n1) + parseInt(n2)) /2;
+
+
+
+
+const verificarSituacao = media >= 5 ? "Aprovado" : "Reprovado" ;
+ 
+
 console.log($nome);
 
-function calcularMedia(){
+const exibirMedia = () =>{
     const $nome = document.getElementById('nome');
-    const $nota1 = document.getElementById('nota1');
-    const $nota2 = document.getElementById('nota2');
+    const nota1 = document.getElementById('nota1');
+    const nota2 = document.getElementById('nota2');
     const $media = document.getElementById('media');
     const $situacao = document.getElementById('situacao');
+    
 
-    const media= (parseInt($nota1.value) + parseInt($nota2.value)) / 2;
+    const media= calcularMedia( nota1, nota2);
 
     
     if(media >= 5){
@@ -79,14 +88,98 @@ function calcularMedia(){
         $situacao.style.color = 'red'; //posso fazer um "style" assim e tbm de outra maneira;
     }
 
+    // meu jeito, funciona !!
+
+    // if($nota1 > 10 || $nota1 < 0 ){
+    //     media.value = "erro, nota invalida";
+    // }
+
+    // if($nota2 > 10 || $nota2 < 0 ){
+    //     media.value = "erro, nota invalida";
+    // }
+    
+    // if(media > 10 || media < 0){
+    //         $conceito.value = "erro, notas invalidas";
+    //     }else{
+    // }if(media == 0 || media < 3){
+    //     $conceito.value = "E"
+    // }else {
+    //     if(media == 3 || media < 5){
+    //         $conceito.value = "D"
+    //     }else{
+    //         if(media == 5 || media < 8){
+    //             $conceito.value = "C"
+    //         }else{
+    //             if(media == 8 || media < 10){
+    //                 $conceito.value = "B"
+    //             }else{
+    //                 if(media == 10){
+    //                     $conceito.value = "A"
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    
+
     console.log($nome.value);
 
     $media.value = media;
 }
 
+calcularConceito = () =>{
+    const media = document.getElementById ('media').value;
+    const $conceito = document.getElementById('conceito');
+    
+    if(media == 0 || media < 3){
+            $conceito.value = "E";
+         }else {
+            if(media == 3 || media < 5){
+                 $conceito.value = "D";
+             }else{
+                 if(media == 5 || media < 8){
+                     $conceito.value = "C";
+                 }else{
+                     if(media == 8 || media < 10){
+                         $conceito.value = "B";
+                     }else{
+                         if(media == 10){
+                             $conceito.value = "A";
+                         }
+                     }
+                 }
+             }
+         }
+    
+}
 
 
-$calcular.addEventListener('click', calcularMedia);
+
+const calcular = () =>{
+    exibirMedia();
+    calcularConceito();
+}
+
+// const calcular2 = function () { // segunda maneira  de encurtar a função
+//     calcularConceito();
+//     calcularMedia;
+// }
+
+// const calcular3 = () => { // iremos usar esta maneira de criar uma função
+//     calcularMedia();
+//     calcularConceito();
+// }
+
+// function soma (a, b) {
+//     return a + b;
+// }
+
+//const soma2 = (a, b) => a + b;// uma das aneiras de encurtar a função. 
+
+//const soma2 = a => a + b; // funciona quando so tem um argumento, ele não precisa de parenteses.
+
+$calcular.addEventListener('click', calcular);
 
 
 
