@@ -69,14 +69,14 @@ function calcularMedia(){
     
     if(media >= 5){
         $situacao.value = "aprovado";
-        $situacao.classList.remove('reprovado');
-        $situacao.classList.add('aprovado');
-        // $situacao.style.color = 'green'; posso fazer um "style" assim e tbm de outra maneira;
+        // $situacao.classList.remove('reprovado');
+        // $situacao.classList.add('aprovado');
+         $situacao.style.color = 'green'; //posso fazer um "style" assim e tbm de outra maneira;
     }else{
         $situacao.value = "reprovado";
-        $situacao.classList.remove('aprovado');
-        $situacao.classList.add('reprovado');
-        // $situacao.style.color = 'red'; posso fazer um "style" assim e tbm de outra maneira;
+        // $situacao.classList.remove('aprovado');
+        // $situacao.classList.add('reprovado');
+        $situacao.style.color = 'red'; //posso fazer um "style" assim e tbm de outra maneira;
     }
 
     console.log($nome.value);
