@@ -1,33 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>testando o javascript</title>
-    
+    <link rel="shortcut icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" >
+    <link rel="stylesheet" href="style.css">
+    <title>Testando o javaScrip</title>
 </head>
+
 <body>
-    <h1> Controle de Notas</h1>
+    <!-- Teste -->
+    <div id='exibir'> exibir </div>
+    <div id='ocultar'> ocultar </div>
     
-         
-    Nome: <input type="text" id="nome" ><hr>
+    <div class="conteiner">
+        <h1>Controle de Notas</h1>
+        <label> Nome:
+            <input type="text" id="nome">
+        </label>
+        <label>Nota1:
+            <input type="text" id="nota1">
+        </label>
+        <label>
+            Nota2:
+            <input type="text" id="nota2">
+        </label>
+            Média:
+            <input type="text" id="media" disabled>
+        </label>
+        Situação:
+        <input type="text" id="situacao" disabled>
+        Conceito:
+        <input type="text" id="conceito" disabled>
 
-    Nota1: <input type="text" id="nota1"><hr>
+        <input type="button" value="calcular" id="calcular">
+    </div>
 
-    Nota2: <input type="text" id="nota2"><hr>
+    <div class="conteiner">
+        <h1>Controle de Notas 2</h1>
+        <label> Nome:
+            <input type="text" id="nome">
+        </label>
+        <label>Nota1:
+            <input type="text" id="nota1">
+        </label>
+        <label>
+            Nota2:
+            <input type="text" id="nota2">
+        </label>
+            Média:
+            <input type="text" id="media" disabled>
+        </label>
+        Situação:
+        <input type="text" id="situacao" disabled>
+        Conceito:
+        <input type="text" id="conceito" disabled>
 
-    Média: <input type="text" id="media" disabled> <hr>
-
-    Situação: <input type="text" id="situacao" disabled><hr>
-
-    conceito: <input type="text" id="conceito" disabled><hr>
-    
-    <input type="button" id="calcular" value="calcular">
-
-
-
+        <input type="button" value="calcular" id="calcular">
+    </div>
 
     <script src="./script.js"></script>
 </body>
+
 </html>
