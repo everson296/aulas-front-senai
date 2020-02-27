@@ -1,0 +1,15 @@
+#resultados{
+    display: grid;
+}
+
+.card{
+    margin: 5px;
+    border: 2px solid orange;
+}
+
+.titulo{
+    background-color: gray;
+}
+
+
+
