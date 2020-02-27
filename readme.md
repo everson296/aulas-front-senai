@@ -13,3 +13,11 @@ aulas realizadas no curso tecnico de desenvolvimento de sistemas no SENAI de jan
 -manipular elementos de desenvolvimento
 -adicionar e remover classes CSS
 -ternário
+
+# projeto - criar uma calculadora de IMC 
+## capacidade 
+
+## desenvolvimento de javaScript
+-mexer com flex
+-vw e vh
+
