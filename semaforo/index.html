@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title> Semáforo</title>
+        <meta charset="utf-8" /> 
+    </head>
+    <body>
+        <img src="./img/desligado.png" id="img"/>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="button" value="vermelho" id="vermelho">
+        <input type="button" value="amarelo" id="amarelo">
+        <input type="button" value="verde" id="verde">
+        <input type="button" value="automatico" id="automatico">        
+        
+        <script>
+            "use strict";
+
+            const $vermelho = document.getElementById('vermelho');
+            const $verde = document.getElementById('verde');
+            const $amarelo = document.getElementById('amarelo');
+            const $auto = document.getElementById('automatico');
+            const $img = document.getElementById('img');
+
+            const vermelho = (vermelho) => {
+                document.getElementById('img').src="./img/vermelho.png";
+            }
+
+            const verde = (verde) => {
+                document.getElementById('img').src="./img/verde.png";
+            }
+
+            const amarelo = (amarelo) => {
+                document.getElementById('img').src="./img/amarelo.png";
+                estadoDoFarol.stop;
+            }
+
+            $vermelho.addEventListener('click',vermelho);
+            $verde.addEventListener('click',verde);
+            $amarelo.addEventListener('click',amarelo);
+
+            const estadoDoFarol = () => !Boolean($img.src.match ('vermelho'));
+
+            const sequencia = () => {  
+                if (estadoDoFarol()) {
+                    vermelho();
+                }else{
+                    amarelo();
+                    
+                }
+            };
+            
+
+            const alternar = () => {
+                id = setInterval ( sequencia, 500);
+            }
+
+            $auto.addEventListener( 'click', alternar);
+        
+
+        </script>
+    
+    </body> 
+</html>
